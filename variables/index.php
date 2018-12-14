@@ -19,4 +19,3 @@ echo $arv1. ' < '.$arv2.' on '.($arv1 < $arv2).'<br>';
 echo $arv1. ' > '.$arv2.' on '.($arv1 > $arv2).'<br>';
 
 
-
