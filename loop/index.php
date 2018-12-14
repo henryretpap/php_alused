@@ -17,21 +17,26 @@ header('refresh: 1');
         border-collapse: collapse;
     }
     td{
-        width: 150px;
+        text-align: center;
     }
 </style>
 <?php
-echo '<h5>Ülesanne 2</h5>';
+echo '<h5> Ülesanne 3</h5>';
 echo '<table>';
-    for($reaNumber = 1; $reaNumber <= 5; $reaNumber++){
-        echo '<tr>';
-            $varv ='#';
-            for($kord = 1; $kord <= 6; $kord++){
-                $varv = $varv.dechex(rand(0, 15));
+    echo '<tr>';
+    for($arv1 = 1; $arv1 <=10; $arv1++) {
+        $txt = ($arv1 == 0) ? '&nbsp;' : $arv1;
+        echo '<th style="background: deepskyblue">'.$txt . '</th>';
+    }
+    echo '</tr>';
+    for($arv1 = 1; $arv1 <= 10; $arv1++){
+        echo'<tr>';
+                echo'<th style="background: coral">'.$arv1.'</th>';
+                for($arv2 = 1; $arv2 <= 10; $arv2++){
+                    echo '<td>';
+                    echo ($arv1 * $arv2);
+                    echo '</td>';
             }
-            for($veeruNumber = 1;  $veeruNumber <= 5; $veeruNumber++) {
-                echo '<td style="background: '.$varv.'">&nbsp;</td>';
-           }
-        echo '</tr>';
+         echo '</tr>';
     }
 echo '</table>';
