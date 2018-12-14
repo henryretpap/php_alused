@@ -9,6 +9,11 @@
  * */
 echo '<h5>Ülessanne 1</h5>';
 for($arv = 1; $arv <= 10; $arv++){
-
-    echo '<div>'.$arv.'</div>';
+    /*if($arv % 2 == 0) {
+        $varv = 'green';
+    } else {
+        $varv = 'red';
+    }*/
+    $varv = (£varv % 2 == 0) ? 'green' : 'red';
+    echo '<div style="color: '.$varv.'">.$varv.'</div>';
 }
