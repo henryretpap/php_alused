@@ -1,4 +1,5 @@
 <?php
+header('refresh: 1');
 // for
 /*
  * for($jmn = alg: $jmn <= lopp; $jmn++){
@@ -7,13 +8,30 @@
  *      saavutanud
  * }
  * */
-echo '<h5>Ülessanne 1</h5>';
-for($arv = 1; $arv <= 10; $arv++){
-    /*if($arv % 2 == 0) {
-        $varv = 'green';
-    } else {
-        $varv = 'red';
-    }*/
-    $varv = (£varv % 2 == 0) ? 'green' : 'red';
-    echo '<div style="color: '.$varv.'">.$varv.'</div>';
-}
+?>
+<style>
+    table, tr, td{
+        width: 300px;
+        height: 80px;
+        border: solid 3px black;
+        border-collapse: collapse;
+    }
+    td{
+        width: 150px;
+    }
+</style>
+<?php
+echo '<h5>Ülesanne 2</h5>';
+echo '<table>';
+    for($reaNumber = 1; $reaNumber <= 5; $reaNumber++){
+        echo '<tr>';
+            $varv ='#';
+            for($kord = 1; $kord <= 6; $kord++){
+                $varv = $varv.dechex(rand(0, 15));
+            }
+            for($veeruNumber = 1;  $veeruNumber <= 5; $veeruNumber++) {
+                echo '<td style="background: '.$varv.'">&nbsp;</td>';
+           }
+        echo '</tr>';
+    }
+echo '</table>';
