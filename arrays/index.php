@@ -1,11 +1,18 @@
 <?php
-$kasutajad = array();
+$kasutajad = array(
+    array(
+        'alice',
+        'bob',
+        'liddle'
+    ),
+    array(
+        'bob',
+        'bob',
+        'builder'
+    )
+);
 
-$kasutajad[] = 'alice';
-$kasutajad[] = 'bob';
-
-array_push($kasutajad,'lucy');
-
-foreach($kasutajad as $kasutaja){
-    echo $kasutaja.'<br>';
-}
+echo '<hr>';
+echo '<pre>';
+print_r($kasutajad);
+echo '</pre>';
